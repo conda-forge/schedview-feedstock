@@ -1,5 +1,5 @@
 {% set name = "schedview" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/schedview-{{ version }}.tar.gz
-  sha256: 6d1a6e368727690c73ec357d384db8b0c162cbc32165507ce3a4a46992795cba
+  sha256: 477be8d968b28a12de6130b2e442307d8803d93f9e1bd90217e398c25f894818
 
 build:
   entry_points:
@@ -15,7 +15,7 @@ build:
     - scheduler_dashboard = schedview.app.scheduler_dashboard.scheduler_dashboard:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
