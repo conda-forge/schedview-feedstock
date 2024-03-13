@@ -25,22 +25,22 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - astropy >= 5.3
+    - astropy >=5.3
     - colorcet
-    - bokeh >= 3.1.1
+    - bokeh >=3.1.1
     - healpy
     - holoviews
     - hvplot
-    - matplotlib
+    - matplotlib-base
     - numpy
     - pandas
-    - panel >= 1.1.0
+    - panel >=1.1.0
     - param
     - pytz
     - pyyaml
     - skyproj
     - rubin-scheduler
-    - uranography >= 1.1.0
+    - uranography >=1.1.0
 
 test:
   imports:
