@@ -15,7 +15,7 @@ build:
     - scheduler_dashboard = schedview.app.scheduler_dashboard.scheduler_dashboard:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -40,6 +40,7 @@ requirements:
     - pyyaml
     - skyproj
     - rubin-scheduler
+    - rubin-sim >=2
     - uranography >=1.1.0
 
 test:
