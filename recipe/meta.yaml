@@ -1,5 +1,6 @@
 {% set name = "schedview" %}
-{% set version = "0.17.0" %}
+{% set version = "0.18.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/schedview-{{ version }}.tar.gz
-  sha256: 2cec74f4dd27fc8129bcc621a477934f331098d05fdb5c8a05685fc8f4a60f27
+  sha256: df11cb94cd9593352c1f241a01499549766e90ef74a9f3b1bb14c5854db14cf6
 
 build:
   entry_points:
@@ -19,13 +20,13 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm <8.0
     - pip
   run:
-    - python >=3.7
-    - astropy >=5.3
+    - python >={{ python_min }}
+    - astropy-base >=5.3
     - colorcet
     - bokeh >=3.1.1
     - healpy
@@ -39,9 +40,9 @@ requirements:
     - pytz
     - pyyaml
     - skyproj
-    - rubin-scheduler
-    - rubin-sim >=2
-    - uranography >=1.1.0
+    - rubin-scheduler >=3.11.0
+    - rubin-sim >=2.2.4
+    - uranography >=1.2.1
 
 test:
   imports:
