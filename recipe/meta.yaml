@@ -1,5 +1,5 @@
 {% set name = "schedview" %}
-{% set version = "0.23.0" %}
+{% set version = "0.24.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/schedview-{{ version }}.tar.gz
-  sha256: 2f1afc11d5ecb6531e86283c35962f960db8170826848f3eca1676d78a7cbce7
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/schedview-{{ version }}.tar.gz
+  sha256: cb95ae1e314d9dafdee1ab4a77b0535e20ed2f9c5ba8d82d840f04781d005869
 
 build:
   entry_points:
